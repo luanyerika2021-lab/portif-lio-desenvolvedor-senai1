@@ -1,0 +1,164 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #0c0014;
+    color: #fff;
+}
+
+/* ===== HEADER ===== */
+header {
+    width: 100%;
+    padding: 25px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(20, 0, 35, 0.4);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(180, 0, 255, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo img {
+    height: 70px;
+    filter: drop-shadow(0 0 12px rgba(150, 0, 255, 0.4));
+    transition: 0.3s;
+}
+.logo img:hover {
+    transform: scale(1.06);
+    filter: drop-shadow(0 0 14px rgb(204, 78, 255));
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #e9d5ff;
+    font-size: 16px;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c77dff;
+    text-shadow: 0 0 10px #b74bff;
+}
+
+/* ===== HERO ===== */
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px;
+    min-height: 90vh;
+}
+
+.texto {
+    max-width: 550px;
+}
+
+.ola {
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+h1 {
+    font-size: 65px;
+    margin: 10px 0 20px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+h1 span {
+    color: #b74bff;
+    text-shadow: 0 0 18px rgba(187, 0, 255, 0.7);
+}
+
+.descricao {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 35px;
+}
+
+/* ===== BOTÕES ===== */
+.botoes {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* botão roxo neon */
+.purple {
+    background: linear-gradient(90deg, #7a2aff, #b600ff);
+    color: #fff;
+    box-shadow: 0 0 12px rgba(174, 0, 255, 0.7);
+}
+.purple:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 15px rgb(211, 90, 255);
+}
+
+/* botão com borda */
+.outline {
+    border: 2px solid #b74bff;
+    color: #b74bff;
+    background: transparent;
+}
+.outline:hover {
+    background: #b74bff;
+    color: #fff;
+    transform: scale(1.07);
+}
+
+/* ===== FOTO ===== */
+.imagem img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid rgba(180, 0, 255, 0.3);
+    box-shadow: 0 0 40px rgba(210, 0, 255, 0.6);
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+/* animação de flutuar */
+@keyframes flutuar {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 40px;
+    }
+
+    header {
+        padding: 20px 40px;
+    }
+
+    nav {
+        gap: 20px;
+    }
+}
